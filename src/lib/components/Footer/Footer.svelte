@@ -5,7 +5,7 @@
 </script>
 
 <nav
-	class="layout flex flex-col lg:flex-row lg:items-center justify-between bg-brown-900 h-full z-10 text-beige-500 py-6 lg:py-12"
+	class="layout flex flex-col lg:flex-row lg:items-center justify-between bg-brown-900 h-full text-beige-500 py-6 lg:py-12"
 >
 	<div class="text-center">
 		<a href="/">

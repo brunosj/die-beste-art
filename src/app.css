@@ -2,27 +2,27 @@
 
 @layer base {
 	html {
-		@apply bg-beige-500 font-secondary;
+		@apply bg-beige-500;
 	}
 
 	h1 {
-		@apply text-2xl font-secondary  md:text-4xl;
+		@apply text-3xl font-secondary  md:text-6xl;
 	}
 
 	h2 {
-		@apply mt-0 text-xl font-light md:text-3xl lg:mt-2;
+		@apply mt-0 text-xl font-secondary font-semibold md:text-4xl lg:mt-2;
 	}
 
 	h3 {
-		@apply text-lg md:text-2xl;
+		@apply text-lg font-secondary  md:text-2xl;
 	}
 
 	h4 {
-		@apply text-base md:text-xl;
+		@apply text-base font-secondary  md:text-xl;
 	}
 
 	p {
-		@apply mb-3 text-sm md:text-base;
+		@apply mb-6 text-base md:text-lg font-regular;
 	}
 
 	.layout {
@@ -43,6 +43,10 @@
 
 	.textHover {
 		@apply duration-300 hover:text-beige-600 group-hover:text-beige-600;
+	}
+
+	.markdownFontSec p {
+		@apply font-secondary;
 	}
 }
 

@@ -1,9 +1,15 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@unpic/svelte':
+    specifier: ^0.0.25
+    version: 0.0.25(svelte@3.59.2)
   clsx:
     specifier: ^1.2.1
     version: 1.2.1
+  embla-carousel-svelte:
+    specifier: 8.0.0-rc07
+    version: 8.0.0-rc07(svelte@3.59.2)
   isomorphic-dompurify:
     specifier: ^1.6.0
     version: 1.6.0
@@ -673,6 +679,23 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
+  /@unpic/core@0.0.24:
+    resolution: {integrity: sha512-HFa7ry3iNYfIOkaWGb0N/w1sxt6MAyUfoXXOvjyz50vtomDUbxK4krcRcQWIca64bORQKncxeJbGETRQLF20WQ==}
+    dependencies:
+      unpic: 3.6.1
+    dev: false
+
+  /@unpic/svelte@0.0.25(svelte@3.59.2):
+    resolution: {integrity: sha512-jXyOl9BDfspJ03/kAeozy69eHjLtKIZjsZ4257mz8J/sn5Il3xsRD4vR701NjEC0fkkLQg9Xol+v92o0LGImtw==}
+    peerDependencies:
+      svelte: '*'
+    dependencies:
+      '@unpic/core': 0.0.24
+      style-object-to-css-string: 1.0.1
+      svelte: 3.59.2
+      unpic: 3.6.1
+    dev: false
+
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
     dev: false
@@ -984,6 +1007,28 @@ packages:
   /electron-to-chromium@1.4.441:
     resolution: {integrity: sha512-LlCgQ8zgYZPymf5H4aE9itwiIWH4YlCiv1HFLmmcBeFYi5E+3eaIFnjHzYtcFQbaKfAW+CqZ9pgxo33DZuoqPg==}
     dev: true
+
+  /embla-carousel-reactive-utils@8.0.0-rc07(embla-carousel@8.0.0-rc07):
+    resolution: {integrity: sha512-MfdReTR3p0GTcUqLY0DNF5mkYRHF/pler9yBUjRjjjBb1OTQjcFedXYhoCDO49009x/IPM00kcbQQuEtJWpQRQ==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc07
+    dependencies:
+      embla-carousel: 8.0.0-rc07
+    dev: false
+
+  /embla-carousel-svelte@8.0.0-rc07(svelte@3.59.2):
+    resolution: {integrity: sha512-6CUumJjHxcl1coA1gVAS8CS6fQ6ca3omcsNKWBgAnWfzPOFxFnLbCKfMaaQ3dBFdT1Fuy+WV625aQVJdrJV7VQ==}
+    peerDependencies:
+      svelte: ^3.49.0
+    dependencies:
+      embla-carousel: 8.0.0-rc07
+      embla-carousel-reactive-utils: 8.0.0-rc07(embla-carousel@8.0.0-rc07)
+      svelte: 3.59.2
+    dev: false
+
+  /embla-carousel@8.0.0-rc07:
+    resolution: {integrity: sha512-IdGbZH042gRT0/3dOCbiv45jOt5E7jpM4h25VzyJujule/3GitJ1/Ib3U/X83auiI3aojKoBe13e1g5g7bwnjg==}
+    dev: false
 
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -2173,6 +2218,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /style-object-to-css-string@1.0.1:
+    resolution: {integrity: sha512-ci7tySCofUqq86WziXoEsIE/aGZ2rkw7mmz6Afklhbmk7i05Z1d8hSUaJMUWUOJPbsvK+7TW5ulklZm55/S44Q==}
+    dev: false
+
   /sucrase@3.32.0:
     resolution: {integrity: sha512-ydQOU34rpSyj2TGyz4D2p8rbktIOZ8QY9s+DGLvFU1i5pWJE8vkpruCjGCMHsdXwnD7JDcS+noSwM/a7zyNFDQ==}
     engines: {node: '>=8'}
@@ -2445,6 +2494,10 @@ packages:
   /universalify@0.2.0:
     resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
     engines: {node: '>= 4.0.0'}
+    dev: false
+
+  /unpic@3.6.1:
+    resolution: {integrity: sha512-4/ZAW3vXkvU2tpyuuAaIrlg58rh55EfzCFDJCxaaua/Ru8Q5f3bABjh5KQtQqRULzV6OaT05PF2pB6h1by98sg==}
     dev: false
 
   /unplugin-icons@0.16.3:

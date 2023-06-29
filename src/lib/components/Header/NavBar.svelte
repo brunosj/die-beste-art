@@ -6,11 +6,11 @@
 </script>
 
 <nav
-	class="layout flex items-center justify-between bg-transparent h-12 relative z-10 text-beige-500 font-semibold"
+	class="layout flex items-center justify-between bg-transparent h-12 relative z-10 text-beige-500 font-semibold font-secondary"
 >
 	<div>
 		<a href="/">
-			<h4 class="font-secondary font-bold tracking-widest textHover">ENTLE</h4>
+			<h4 class="font-bold tracking-widest textHover">ENTLE</h4>
 		</a>
 	</div>
 	<div class="hidden lg:flex items-center space-x-12">

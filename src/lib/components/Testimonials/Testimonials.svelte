@@ -1,0 +1,19 @@
+<script lang="ts">
+	import { env } from '$env/dynamic/public';
+	import { onMount } from 'svelte';
+	import type { Testimonial } from '$types/responseInterfaces';
+	import Carousel from '$components/Carousel/Carousel.svelte';
+
+	let data: Testimonial[];
+
+	onMount(async () => {
+		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-kundenstimmen?populate=*`);
+		const responseData = await res.json();
+		data = responseData.data;
+		console.log(data);
+	});
+</script>
+
+{#if data}
+	<Carousel slides={data} />
+{/if}

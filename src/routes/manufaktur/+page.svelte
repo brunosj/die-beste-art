@@ -4,6 +4,11 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import type { Page } from '$types/responseInterfaces';
 	import Header from '$components/Header/Header.svelte';
+	import TopSection from '$components/Sections/TopSection.svelte';
+	import BannerSection from '$components/Sections/BannerSection.svelte';
+	import BottomSection from '$components/Sections/BottomSection.svelte';
+	import { CTA } from '$components';
+	import Seo from '$components/SEO/SEO.svelte';
 
 	let pageData: Page;
 
@@ -13,25 +18,38 @@
 		);
 		const data = await res.json();
 		pageData = data.data[0];
-		console.log(pageData);
 	});
 </script>
 
 {#if pageData}
+	<Seo title={pageData.attributes.titel} />
 	<Header
 		headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
-		headerHeight="h-80"
+		headerHeight="h-48 lg:h-96"
 		headerTitle={pageData.attributes.titel}
 	/>
-	<section class="layout">
-		<div>
-			{pageData.attributes.topSektion.titel}
-		</div>
-		<div>
-			<SvelteMarkdown source={pageData.attributes.topSektion.text} />
-		</div>
-	</section>
-{/if}
 
-<style>
-</style>
+	<TopSection
+		title={pageData.attributes.topSektion.titel}
+		text={pageData.attributes.topSektion.text}
+		picture1Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.topSektion.bild1.data.attributes.url}`}
+		picture2Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.topSektion.bild2.data.attributes.url}`}
+		rectangle1Color="#5c3929"
+		rectangle2Color="#735464"
+	/>
+	<BannerSection
+		title={pageData.attributes.bannerSektion.titel}
+		text={pageData.attributes.bannerSektion.text}
+		pictureSrc={`${env.PUBLIC_CMS_URL}${pageData.attributes.bannerSektion.bild.data.attributes.url}`}
+		gradientEndColor="to-purple-600"
+	/>
+	<BottomSection
+		title={pageData.attributes.unterSektion.titel}
+		text={pageData.attributes.unterSektion.text}
+		picture1Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.unterSektion.bild1.data.attributes.url}`}
+		picture2Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.unterSektion.bild2.data.attributes.url}`}
+		rectangle1Color="#5c3929"
+		rectangle2Color="#93cf72"
+	/>
+	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
+{/if}

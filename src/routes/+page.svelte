@@ -5,49 +5,30 @@
 	import { CTA } from '$components';
 	import Header from '$components/Header/Header.svelte';
 	import UniqueSellingProposition from '$components/USP/UniqueSellingProposition.svelte';
+	import Seo from '$components/SEO/SEO.svelte';
 
 	let pageData: Homepage;
 
 	onMount(async () => {
-		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-homepages?populate=*`);
+		const res = await fetch(
+			`${env.PUBLIC_CMS_API_URL}entle-startseite?populate[USP][populate]=*&populate[bild][populate]=*&populate[CTA1][populate]=*&populate[CTA2][populate]=*`
+		);
 		const data = await res.json();
-		pageData = data.data[0];
+		pageData = data.data;
+		console.log(pageData);
 	});
 </script>
 
-<div class="">
-	{#if pageData}
-		<Header
-			headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
-			headerHeight="h-80"
-			headerTitle=""
-		/>
-		<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={0} />
-		<UniqueSellingProposition
-			mainText={pageData.attributes.USPText}
-			uspData={[
-				{
-					title: pageData.attributes.USP1Titel,
-					subtitle: pageData.attributes.USP1Untertitel,
-					picture: pageData.attributes.USP1Bild,
-					path: pageData.attributes.USP1Pfad
-				},
-				{
-					title: pageData.attributes.USP2Titel,
-					subtitle: pageData.attributes.USP2Untertitel,
-					picture: pageData.attributes.USP2Bild,
-					path: pageData.attributes.USP2Pfad
-				},
-				{
-					title: pageData.attributes.USP3Titel,
-					subtitle: pageData.attributes.USP3Untertitel,
-					picture: pageData.attributes.USP3Bild,
-					path: pageData.attributes.USP3Pfad
-				}
-			]}
-		/>
-	{/if}
-</div>
-
-<style>
-</style>
+{#if pageData}
+	<Seo />
+	<Header
+		headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
+		headerHeight="h-48 lg:h-96"
+		headerTitle=""
+	/>
+	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={0} />
+	<UniqueSellingProposition
+		mainText={pageData.attributes.heroText}
+		uspData={pageData.attributes.USP}
+	/>
+{/if}

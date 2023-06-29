@@ -18,27 +18,34 @@
 
 {#if data}
 	<div class="relative overflow-hidden">
-		<div class="absolute w-full -z-50 opacity-[2%] overflow-hidden">
+		<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
 			<Topography />
 		</div>
-		<div class="layout lg:grid grid-cols-2 py-12 lg:py-24">
-			<div class="flex flex-col justify-between">
+		<div class="layout lg:grid grid-cols-2 sectionPy">
+			<div class="flex flex-col justify-between text-center lg:text-left">
 				<div>
-					<h1>
+					<h2>
 						{data.attributes.text}
-					</h1>
+					</h2>
 				</div>
-				<div class="pt-6 pb-3 lg:pt-0 lg:pb-0">
+				<div class="hidden lg:block pt-6 pb-3 lg:pt-0 lg:pb-0">
 					<Button color="light" {path} className="">Jetzt probieren</Button>
 				</div>
 			</div>
-			<div class={`${CTAIndex === 0 ? 'order-last ml-auto' : 'order-first mr-auto'}`}>
-				<div class="relative h-40 w-full">
+			<div
+				class={`${
+					CTAIndex === 0 ? 'order-last ml-auto' : 'order-first mr-auto'
+				} flex flex-col items-center space-y-6 pt-3`}
+			>
+				<div class="relative h-32 lg:h-40 w-full flex justify-center items-center">
 					<img
 						src={`${env.PUBLIC_CMS_URL}${data.attributes.bild.data.attributes.url}`}
 						alt="Cacao"
 						class="object-cover h-full"
 					/>
+				</div>
+				<div class="block lg:hidden lg:pt-0 lg:pb-0">
+					<Button color="light" {path} className="">Jetzt probieren</Button>
 				</div>
 			</div>
 		</div>

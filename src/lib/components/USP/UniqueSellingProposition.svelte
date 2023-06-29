@@ -3,11 +3,12 @@
 	import { onMount } from 'svelte';
 	import WorldMap from '$assets/world.svelte';
 	import UspChild from './USPChild.svelte';
-	import type { Picture } from '$types/responseInterfaces';
+	import type { USP } from '$types/responseInterfaces';
 	import { CTA } from '$components';
-
+	import Testimonials from '$components/Testimonials/Testimonials.svelte';
 	export let mainText: string;
-	export let uspData: { title: string; subtitle: string; path: string; picture: Picture }[] = [];
+	export let uspData: USP[];
+
 	let mapHeight: number;
 	onMount(() => {
 		mapHeight = window.innerWidth < 640 ? 200 : 400;
@@ -33,13 +34,12 @@
 			<WorldMap height={mapHeight} countryColor="#bdac7d" />
 		</div>
 	</div>
-	{#each uspData as uspItem (uspItem.title)}
-		<UspChild
-			title={uspItem.title}
-			subtitle={uspItem.subtitle}
-			path={uspItem.path}
-			picture={uspItem.picture}
-		/>
+	{#each uspData as item}
+		<UspChild title={item.titel} subtitle={item.untertitel} path={item.pfad} picture={item.bild} />
 	{/each}
+	<div class="pt-0 lg:pt-24">
+		<Testimonials />
+	</div>
+
 	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
 </div>

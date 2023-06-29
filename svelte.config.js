@@ -22,7 +22,7 @@ const config = {
 			$assets: 'src/lib/assets',
 			$data: 'src/lib/data',
 			$types: 'src/lib/types',
-			$stypes: 'src/lib/styles'
+			$styles: 'src/lib/styles'
 		},
 		csp: {
 			directives: {

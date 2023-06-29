@@ -6,10 +6,27 @@ export interface Picture {
 		};
 	};
 }
+
+export interface Team {
+	attributes: {
+		name: string;
+		text: string;
+		bild: Picture;
+	};
+}
+
+export interface USP {
+	titel: string;
+	untertitel: string;
+	pfad: string;
+	bild: Picture;
+}
+
 export interface Homepage {
 	attributes: {
 		titel: string;
 		slug: string;
+		heroText: string;
 		bild: {
 			data: {
 				attributes: {
@@ -17,21 +34,7 @@ export interface Homepage {
 				};
 			};
 		};
-		CTA1: CTA;
-		CTA2: CTA;
-		USP1Titel: string;
-		USP1Untertitel: string;
-		USP1Pfad: string;
-		USP1Bild: Picture;
-		USP2Titel: string;
-		USP2Untertitel: string;
-		USP2Pfad: string;
-		USP2Bild: Picture;
-		USP3Titel: string;
-		USP3Untertitel: string;
-		USP3Pfad: string;
-		USP3Bild: Picture;
-		USPText: string;
+		USP: USP[];
 	};
 	id: number;
 }
@@ -86,4 +89,27 @@ export type Section = {
 			};
 		};
 	};
+	bild1: {
+		data: {
+			attributes: {
+				url: string;
+			};
+		};
+	};
+	bild2: {
+		data: {
+			attributes: {
+				url: string;
+			};
+		};
+	};
 };
+
+export interface Testimonial {
+	attributes: {
+		name: string;
+		text: string;
+		jobtitel: string;
+		bild: Picture;
+	};
+}
