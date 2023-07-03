@@ -25,7 +25,7 @@
 {#if pageData}
 	<Seo title={pageData.attributes.titel} />
 	<Header
-		headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
+		headerImage={pageData.attributes.bild.data.attributes.url}
 		headerHeight="h-48 lg:h-96"
 		headerTitle={pageData.attributes.titel}
 	/>
@@ -36,7 +36,7 @@
 	<BannerSection
 		title={pageData.attributes.bannerSektion.titel}
 		text={pageData.attributes.bannerSektion.text}
-		pictureSrc={`${env.PUBLIC_CMS_URL}${pageData.attributes.bannerSektion.bild.data.attributes.url}`}
+		pictureSrc={pageData.attributes.bannerSektion.bild.data.attributes.url}
 		gradientEndColor="to-gold-600"
 	/>
 	<Team />

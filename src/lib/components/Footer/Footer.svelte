@@ -1,7 +1,5 @@
 <script>
 	import { menu, additionalMenu } from '$data/menu';
-	import { env } from '$env/dynamic/public';
-	import Button from '$components/Button/Button.svelte';
 </script>
 
 <nav

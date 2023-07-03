@@ -10,7 +10,6 @@
 		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-kundenstimmen?populate=*`);
 		const responseData = await res.json();
 		data = responseData.data;
-		console.log(data);
 	});
 </script>
 

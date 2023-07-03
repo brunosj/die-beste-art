@@ -7,6 +7,7 @@
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { cubicInOut } from 'svelte/easing';
 	import { fade, fly } from 'svelte/transition';
+	import { Image } from '@unpic/svelte';
 
 	let element;
 	let intersecting: boolean = false;
@@ -51,10 +52,13 @@
 							} flex flex-col items-center space-y-6 pt-3`}
 						>
 							<div class="relative h-32 lg:h-40 w-full flex justify-center items-center">
-								<img
-									src={`${env.PUBLIC_CMS_URL}${data.attributes.bild.data.attributes.url}`}
+								<Image
+									src={data.attributes.bild.data.attributes.url}
+									layout="fullWidth"
 									alt="Cacao"
-									class="object-cover h-full"
+									priority={true}
+									class="object-cover h-full w-full saturate-[1]"
+									loading="eager"
 								/>
 							</div>
 							<div class="block lg:hidden lg:pt-0 lg:pb-0">

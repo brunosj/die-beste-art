@@ -27,9 +27,9 @@
 				<div class=" relative">
 					<div class="absolute -top-24 lg:top-12 aspect-square h-32 lg:h-64">
 						<Image
-							src={`${env.PUBLIC_CMS_URL}${item.attributes.bild.data.attributes.url}`}
+							src={item.attributes.bild.data.attributes.url}
 							layout="fullWidth"
-							alt="ENTLE"
+							alt=""
 							priority={true}
 							class=" w-full h-full object-cover object-center saturate-[0.75] rounded-md"
 						/>
@@ -37,15 +37,12 @@
 				</div>
 				<div class="col-span-2 p-12 flex flex-col justify-center" bind:this={element}>
 					<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'0px'}>
-						{#if intersecting}
-							<div
-								class="space-y-6 lg:space-y-12"
-								transition:fade={{ duration: 750, delay: 1000, easing: cubicInOut }}
-							>
+						<div class="space-y-6 lg:space-y-12">
+							{#if intersecting}
 								<h2>{item.attributes.name}</h2>
 								<SvelteMarkdown source={item.attributes.text} />
-							</div>
-						{/if}
+							{/if}
+						</div>
 					</IntersectionObserver>
 				</div>
 			</div>

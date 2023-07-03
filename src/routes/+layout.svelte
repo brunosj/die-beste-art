@@ -24,7 +24,12 @@
 {#key pathname}
 	<main>
 		<NavBar />
-		<section class="-mt-12 z-0 min-h-screen" in:fly={transitionIn} out:fly={transitionOut}>
+		<section
+			class="-mt-12 z-0 min-h-screen"
+			in:fly={transitionIn}
+			out:fly={transitionOut}
+			on:outroend={scrollToTop}
+		>
 			<slot />
 		</section>
 		<Footer />

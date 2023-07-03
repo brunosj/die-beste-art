@@ -7,6 +7,7 @@
 	class="embla__button embla__button--prev"
 	on:click|preventDefault={scrollPrev}
 	disabled={!enabled}
+	aria-label="Previous slide"
 >
 	<svg class="embla__button__svg" viewBox="137.718 -1.001 366.563 644">
 		<path

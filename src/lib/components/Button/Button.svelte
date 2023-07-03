@@ -16,6 +16,7 @@
 			: 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out',
 		'text-beige-500 flex py-3 px-4  text-sm uppercase rounded-md'
 	)}
+	aria-label={`Go to ${path}`}
 >
 	{#if isExternal}
 		<a href={path} rel="noopener noreferrer" target="_blank">

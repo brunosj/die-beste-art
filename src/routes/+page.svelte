@@ -21,7 +21,7 @@
 {#if pageData}
 	<Seo />
 	<Header
-		headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
+		headerImage={pageData.attributes.bild.data.attributes.url}
 		headerHeight="h-48 lg:h-96"
 		headerTitle=""
 	/>

@@ -24,7 +24,7 @@
 {#if pageData}
 	<Seo title={pageData.attributes.titel} />
 	<Header
-		headerImage={`${env.PUBLIC_CMS_URL}${pageData.attributes.bild.data.attributes.url}`}
+		headerImage={pageData.attributes.bild.data.attributes.url}
 		headerHeight="h-48 lg:h-96"
 		headerTitle={pageData.attributes.titel}
 	/>
@@ -32,22 +32,22 @@
 	<TopSection
 		title={pageData.attributes.topSektion.titel}
 		text={pageData.attributes.topSektion.text}
-		picture1Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.topSektion.bild1.data.attributes.url}`}
-		picture2Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.topSektion.bild2.data.attributes.url}`}
+		picture1Src={pageData.attributes.topSektion.bild1.data.attributes.url}
+		picture2Src={pageData.attributes.topSektion.bild2.data.attributes.url}
 		rectangle1Color="#5c3929"
 		rectangle2Color="#735464"
 	/>
 	<BannerSection
 		title={pageData.attributes.bannerSektion.titel}
 		text={pageData.attributes.bannerSektion.text}
-		pictureSrc={`${env.PUBLIC_CMS_URL}${pageData.attributes.bannerSektion.bild.data.attributes.url}`}
+		pictureSrc={pageData.attributes.bannerSektion.bild.data.attributes.url}
 		gradientEndColor="to-purple-600"
 	/>
 	<BottomSection
 		title={pageData.attributes.unterSektion.titel}
 		text={pageData.attributes.unterSektion.text}
-		picture1Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.unterSektion.bild1.data.attributes.url}`}
-		picture2Src={`${env.PUBLIC_CMS_URL}${pageData.attributes.unterSektion.bild2.data.attributes.url}`}
+		picture1Src={pageData.attributes.unterSektion.bild1.data.attributes.url}
+		picture2Src={pageData.attributes.unterSektion.bild2.data.attributes.url}
 		rectangle1Color="#5c3929"
 		rectangle2Color="#93cf72"
 	/>

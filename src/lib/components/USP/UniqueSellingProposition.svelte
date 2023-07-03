@@ -16,7 +16,6 @@
 	let intersecting: boolean = false;
 	let mapHeight: number;
 
-	$: console.log(intersecting);
 	onMount(() => {
 		mapHeight = window.innerWidth < 640 ? 200 : 400;
 

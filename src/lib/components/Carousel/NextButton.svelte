@@ -7,6 +7,7 @@
 	class="embla__button embla__button--next"
 	on:click|preventDefault={scrollNext}
 	disabled={!enabled}
+	aria-label="Next slide"
 >
 	<svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
 		<path

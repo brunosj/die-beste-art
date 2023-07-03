@@ -69,7 +69,7 @@
 					<div class="flex items-center space-x-3">
 						<div class="aspect-square h-20 w-20">
 							<Image
-								src={`${env.PUBLIC_CMS_URL}${slide.attributes.bild.data.attributes.url}`}
+								src={slide.attributes.bild.data.attributes.url}
 								layout="fullWidth"
 								alt="ENTLE"
 								aspectRatio={1}
