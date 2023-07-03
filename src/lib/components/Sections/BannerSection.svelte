@@ -2,10 +2,18 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import { Image } from '@unpic/svelte';
 	import clsx from 'clsx';
+
+	import { fly, fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
+
 	export let title: string;
 	export let text: string;
 	export let pictureSrc: string;
 	export let gradientEndColor: string;
+
+	let element;
+	let intersecting: boolean = false;
 </script>
 
 <section
@@ -15,11 +23,20 @@
 	)}
 >
 	<div class="layout h-full">
-		<div class="w-full lg:w-1/2 flex flex-col ml-auto text-beige-500 h-full justify-center">
-			<h2>{title}</h2>
-			<div class="pt-12 markdownFontSec text-2xl">
-				<SvelteMarkdown source={text} />
-			</div>
+		<div
+			class="w-full lg:w-1/2 flex flex-col ml-auto text-beige-500 h-full justify-center"
+			bind:this={element}
+		>
+			<IntersectionObserver {element} bind:intersecting threshold={0.5} once rootMargin={'0px'}>
+				{#if intersecting}
+					<div transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+						<h2>{title}</h2>
+						<div class="pt-12 markdownFontSec text-2xl">
+							<SvelteMarkdown source={text} />
+						</div>
+					</div>
+				{/if}
+			</IntersectionObserver>
 		</div>
 	</div>
 	<div class="absolute top-0 -z-10 w-full h-full">

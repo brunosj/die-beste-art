@@ -15,7 +15,6 @@
 		);
 		const data = await res.json();
 		pageData = data.data;
-		console.log(pageData);
 	});
 </script>
 

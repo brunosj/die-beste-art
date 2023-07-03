@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@unpic/placeholder':
+    specifier: ^0.1.2
+    version: 0.1.2
   '@unpic/svelte':
     specifier: ^0.0.25
     version: 0.0.25(svelte@3.59.2)
@@ -66,6 +69,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.4.4
     version: 3.4.4(postcss@8.4.24)(svelte@3.59.2)
+  svelte-intersection-observer:
+    specifier: ^0.10.0
+    version: 0.10.0
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
@@ -685,6 +691,12 @@ packages:
       unpic: 3.6.1
     dev: false
 
+  /@unpic/placeholder@0.1.2:
+    resolution: {integrity: sha512-O++tS97biojo5sqn5TeTt+jUjl5gWOdIQuOXe8YluTJWq4L0GM6VuTkaspNpsmxHfioJw/6YBirzOpG4t87l8Q==}
+    dependencies:
+      blurhash: 2.0.5
+    dev: false
+
   /@unpic/svelte@0.0.25(svelte@3.59.2):
     resolution: {integrity: sha512-jXyOl9BDfspJ03/kAeozy69eHjLtKIZjsZ4257mz8J/sn5Il3xsRD4vR701NjEC0fkkLQg9Xol+v92o0LGImtw==}
     peerDependencies:
@@ -794,6 +806,10 @@ packages:
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+
+  /blurhash@2.0.5:
+    resolution: {integrity: sha512-cRygWd7kGBQO3VEhPiTgq4Wc43ctsM+o46urrmPOiuAe+07fzlSB9OJVdpgDL0jPqXUVQ9ht7aq7kxOeJHRK+w==}
+    dev: false
 
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -2299,6 +2315,10 @@ packages:
       svelte: ^3.19.0 || ^4.0.0-next.0
     dependencies:
       svelte: 3.59.2
+    dev: true
+
+  /svelte-intersection-observer@0.10.0:
+    resolution: {integrity: sha512-GdOTMSrRpoBciMe+NbocsHOBvqKJ5OiL5H8Jz4mBoDGHba9VOI4oGeXAmMOmh8mi5gq95+0b0DVI+6alcQ7TCA==}
     dev: true
 
   /svelte-markdown@0.2.3(svelte@3.59.2):

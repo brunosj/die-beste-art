@@ -4,14 +4,19 @@
 	import type { Team } from '$types/responseInterfaces';
 	import SvelteMarkdown from 'svelte-markdown';
 	import { Image } from '@unpic/svelte';
+	import { fly, fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+	import IntersectionObserver from 'svelte-intersection-observer';
 
 	let data: Team[];
+
+	let element;
+	let intersecting: boolean = false;
 
 	onMount(async () => {
 		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-teams?populate=*`);
 		const responseData = await res.json();
 		data = responseData.data;
-		console.log(data);
 	});
 </script>
 
@@ -30,13 +35,20 @@
 						/>
 					</div>
 				</div>
-				<div class="flex flex-col justify-center col-span-2 p-12 space-y-6 lg:space-y-12">
-					<h2>{item.attributes.name}</h2>
-
-					<SvelteMarkdown source={item.attributes.text} />
+				<div class="col-span-2 p-12 flex flex-col justify-center" bind:this={element}>
+					<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'0px'}>
+						{#if intersecting}
+							<div
+								class="space-y-6 lg:space-y-12"
+								transition:fade={{ duration: 750, delay: 1000, easing: cubicInOut }}
+							>
+								<h2>{item.attributes.name}</h2>
+								<SvelteMarkdown source={item.attributes.text} />
+							</div>
+						{/if}
+					</IntersectionObserver>
 				</div>
 			</div>
-			<!-- content here -->
 		{/each}
 	</div>
 {/if}

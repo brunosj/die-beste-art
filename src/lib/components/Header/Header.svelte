@@ -16,11 +16,10 @@
 			alt="ENTLE"
 			priority={true}
 			class="object-cover h-full w-full saturate-[1]"
+			loading="eager"
 		/>
 		<div class="absolute layout bottom-6 lg:bottom-12">
-			<h1 class="text-beige-500 font-semibold">
-				{headerTitle}
-			</h1>
+			<h1 class="text-beige-500 font-semibold">{headerTitle}</h1>
 		</div>
 	</div>
 </div>

@@ -3,19 +3,28 @@
 	import '$styles/carousel.css';
 	import { Footer } from '$components';
 	import NavBar from '$components/Header/NavBar.svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
 
 	export let data;
+	$: pathname = data.pathname;
+
+	const duration = 300;
+	const delay = duration + 100;
+	const y = 0;
+
+	const transitionIn = { easing: cubicOut, y, duration, delay };
+	const transitionOut = { easing: cubicIn, y: -20, duration, delay };
+
+	function scrollToTop() {
+		window.scrollTo({ top: 0 });
+	}
 </script>
 
-{#key data.currentPath}
+{#key pathname}
 	<main>
 		<NavBar />
-		<section
-			class="-mt-12 z-0"
-			in:fly={{ y: -30, duration: 200, delay: 150 }}
-			out:fly={{ y: -30, duration: 150 }}
-		>
+		<section class="-mt-12 z-0 min-h-screen" in:fly={transitionIn} out:fly={transitionOut}>
 			<slot />
 		</section>
 		<Footer />
