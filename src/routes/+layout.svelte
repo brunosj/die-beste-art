@@ -28,15 +28,12 @@
 </script>
 
 {#key pathname}
-	<main>
+	<main in:fly={transitionIn} out:fly={transitionOut} on:outroend={scrollToTop}>
 		<NavBar />
 		<section
 			class={isMenuOpen
 				? 'filter blur-sm duration-700 ease-in-out -mt-12 z-0 min-h-screen'
 				: '-mt-12 z-0 min-h-screen'}
-			in:fly={transitionIn}
-			out:fly={transitionOut}
-			on:outroend={scrollToTop}
 		>
 			<slot />
 		</section>

@@ -20,21 +20,21 @@
 
 <section
 	class={`layout relative ${
-		picture1Src ? 'grid grid-cols-4 grid-rows-3 pt-12 lg:pt-0' : 'sectionPy'
+		picture1Src ? 'grid grid-cols-4 grid-rows-3 pt-12 md:pt-0' : 'sectionPy'
 	} overflow-hidden `}
 >
 	<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
 		<Topography />
 	</div>
 	<div
-		class="col-span-4 lg:col-span-2 row-span-3 flex flex-col my-auto w-full lg:w-3/4"
+		class="col-span-4 md:col-span-2 row-span-3 flex flex-col my-auto w-full md:w-3/4"
 		bind:this={element}
 	>
 		<IntersectionObserver {element} bind:intersecting threshold={1} once rootMargin={'0px'}>
 			{#if intersecting}
-				<div transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+				<div transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }} class="md:py-12">
 					<h2>{title}</h2>
-					<div class="pt-6 lg:pt-12">
+					<div class="pt-6 md:pt-12">
 						<SvelteMarkdown source={text} />
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 		</IntersectionObserver>
 	</div>
 	{#if picture1Src}
-		<div class="col-span-2 lg:col-span-1 row-span-3">
+		<div class="col-span-2 md:col-span-1 row-span-3">
 			<div class="row-span-1 aspect-square">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1">
 					<rect width="1" height="1" fill={rectangle1Color} />
@@ -67,7 +67,7 @@
 		</div>
 	{/if}
 	{#if picture2Src}
-		<div class="col-span-2 lg:col-span-1 row-span-3">
+		<div class="col-span-2 md:col-span-1 row-span-3">
 			<div class="row-span-1 aspect-square">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1">
 					<rect width="1" height="1" fill="transparent" />
