@@ -61,7 +61,7 @@
 >
 	<div class="embla__container">
 		{#each slides as slide, i}
-			<div class="layout w-full max-w-5xl gap-12">
+			<div class="layout w-full 2xl:max-w-7xl max-w-5xl gap-12">
 				<div class=" mt-3 flex flex-col ounded-md p-6 items-center space-y-6">
 					<div class="text-center">
 						<SvelteMarkdown source={slide.attributes.text} />

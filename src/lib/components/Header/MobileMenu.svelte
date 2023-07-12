@@ -3,6 +3,7 @@
 	import { menu, additionalMenu } from '$data/menu';
 	import Menu from 'virtual:icons/material-symbols/menu-rounded';
 	import Close from 'virtual:icons/material-symbols/close-rounded';
+	import { menuOpen } from '$stores/store';
 
 	let menuRef: HTMLDivElement;
 	let isOpen = false;
@@ -12,7 +13,7 @@
 	onMount(() => {
 		const handleClickOutside = (e: Event) => {
 			if (menuRef && !menuRef.contains(e.target as Node)) {
-				isOpen = false;
+				menuOpen.set(false);
 			}
 		};
 		document.addEventListener('mousedown', handleClickOutside);
@@ -37,7 +38,7 @@
 			type="button"
 			aria-label="change theme"
 			class="textHover text-beige-500"
-			on:click={() => (isOpen = true)}
+			on:click={() => menuOpen.set(true)}
 		>
 			<Menu />
 		</button>
@@ -45,14 +46,14 @@
 	<div
 		bind:this={menuRef}
 		class={`fixed bg-beige-500 top-0 right-0 h-full  w-4/5 overflow-auto  transform duration-300 ease-in-out text-neutral-900 ${
-			isOpen ? 'translate-x-0' : `translate-x-full`
+			$menuOpen ? 'translate-x-0' : `translate-x-full`
 		} transition-transform`}
 	>
 		<div class=" bg-taupe absolute inset-0 w-full h-auto -z-50" />
 		<div class="flex justify-end">
 			<button
 				class="px-6 pt-3 text-neutral-900"
-				on:click={() => (isOpen = false)}
+				on:click={() => menuOpen.set(false)}
 				aria-label="Close menu"
 			>
 				<Close />
@@ -66,7 +67,7 @@
 						rel={item.slug.startsWith('http') ? 'noopener noreferrer' : ''}
 						target={item.slug.startsWith('http') ? '_blank' : ''}
 						class="block px-4 py-2 text-xl textHover"
-						on:click={() => (isOpen = false)}
+						on:click={() => menuOpen.set(false)}
 					>
 						{item.name}
 					</a>
@@ -79,7 +80,7 @@
 						rel={item.slug.startsWith('http') ? 'noopener noreferrer' : ''}
 						target={item.slug.startsWith('http') ? '_blank' : ''}
 						class="block px-4 py-2 text-sm textHover"
-						on:click={() => (isOpen = false)}
+						on:click={() => menuOpen.set(false)}
 					>
 						{item.name}
 					</a>

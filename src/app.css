@@ -41,12 +41,20 @@
 		@apply py-12 lg:py-24;
 	}
 
+	.sectionPb {
+		@apply pb-12 lg:pb-24;
+	}
+
 	.textHover {
 		@apply duration-300 hover:text-beige-600 group-hover:text-beige-600;
 	}
 
 	.markdownFontSec p {
 		@apply font-secondary;
+	}
+
+	.markdown a {
+		@apply duration-300 hover:text-beige-600 group-hover:text-beige-600 underline-offset-4 underline;
 	}
 }
 

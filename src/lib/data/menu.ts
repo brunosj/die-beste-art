@@ -24,6 +24,6 @@ export const additionalMenu = [
 	},
 	{
 		name: 'Datenschutzerklärung',
-		slug: '/datenschutzerklaerung'
+		slug: '/datenschutz'
 	}
 ];

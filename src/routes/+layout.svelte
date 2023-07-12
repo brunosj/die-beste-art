@@ -5,11 +5,17 @@
 	import NavBar from '$components/Header/NavBar.svelte';
 	import { fly, fade } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { menuOpen } from '$stores/store';
 
 	export let data;
 	$: pathname = data.pathname;
 
-	const duration = 300;
+	let isMenuOpen = false;
+	menuOpen.subscribe((value) => {
+		isMenuOpen = value;
+	});
+
+	const duration = 200;
 	const delay = duration + 100;
 	const y = 0;
 
@@ -25,7 +31,9 @@
 	<main>
 		<NavBar />
 		<section
-			class="-mt-12 z-0 min-h-screen"
+			class={isMenuOpen
+				? 'filter blur-sm duration-700 ease-in-out -mt-12 z-0 min-h-screen'
+				: '-mt-12 z-0 min-h-screen'}
 			in:fly={transitionIn}
 			out:fly={transitionOut}
 			on:outroend={scrollToTop}

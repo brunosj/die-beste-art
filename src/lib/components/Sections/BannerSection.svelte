@@ -27,7 +27,7 @@
 			class="w-full lg:w-1/2 flex flex-col ml-auto text-beige-500 h-full justify-center"
 			bind:this={element}
 		>
-			<IntersectionObserver {element} bind:intersecting threshold={0.5} once rootMargin={'0px'}>
+			<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'0px'}>
 				{#if intersecting}
 					<div transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
 						<h2>{title}</h2>

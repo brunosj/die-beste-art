@@ -54,6 +54,7 @@ export interface Page {
 		CTA: {
 			data: CTA;
 		};
+		text: string;
 
 		topSektion: Section;
 		bannerSektion: Section;

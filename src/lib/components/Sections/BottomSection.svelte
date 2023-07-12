@@ -3,6 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
+	import Topography from '$assets/svg/topography.svelte';
 
 	export let title: string;
 	export let text: string;
@@ -15,8 +16,11 @@
 	let intersecting: boolean = false;
 </script>
 
-<section class="layout grid grid-cols-2 overflow-hidden pt-12 lg:pt-0" bind:this={element}>
-	<IntersectionObserver {element} bind:intersecting threshold={1} once rootMargin={'-200px'}>
+<section class="relative layout grid grid-cols-2 overflow-hidden pt-12 lg:pt-0" bind:this={element}>
+	<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
+		<Topography />
+	</div>
+	<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'-200px'}>
 		{#if intersecting}
 			<div class="col-span-2 lg:col-span-1 flex flex-col my-auto w-full lg:w-3/4">
 				<div transition:fade={{ duration: 750, delay: 1000, easing: cubicInOut }}>

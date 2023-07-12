@@ -35,15 +35,11 @@
 						/>
 					</div>
 				</div>
-				<div class="col-span-2 p-12 flex flex-col justify-center" bind:this={element}>
-					<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'0px'}>
-						<div class="space-y-6 lg:space-y-12">
-							{#if intersecting}
-								<h2>{item.attributes.name}</h2>
-								<SvelteMarkdown source={item.attributes.text} />
-							{/if}
-						</div>
-					</IntersectionObserver>
+				<div class="col-span-2 p-12 flex flex-col justify-center min-h-[12rem]">
+					<div class="space-y-6 lg:space-y-12">
+						<h2>{item.attributes.name}</h2>
+						<SvelteMarkdown source={item.attributes.text} />
+					</div>
 				</div>
 			</div>
 		{/each}

@@ -18,13 +18,14 @@ const config = {
 			$assets: 'src/lib/assets',
 			$data: 'src/lib/data',
 			$types: 'src/lib/types',
-			$styles: 'src/lib/styles'
+			$styles: 'src/lib/styles',
+			$stores: 'src/lib/stores'
+		},
+		csp: {
+			directives: {
+				'script-src': ['self']
+			}
 		}
-		// csp: {
-		// 	directives: {
-		// 		'script-src': ['self']
-		// 	}
-		// }
 	}
 };
 

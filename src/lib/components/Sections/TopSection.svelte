@@ -5,6 +5,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
+	import Topography from '$assets/svg/topography.svelte';
 
 	export let title: string;
 	export let text: string;
@@ -18,10 +19,13 @@
 </script>
 
 <section
-	class={`layout ${
+	class={`layout relative ${
 		picture1Src ? 'grid grid-cols-4 grid-rows-3 pt-12 lg:pt-0' : 'sectionPy'
 	} overflow-hidden `}
 >
+	<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
+		<Topography />
+	</div>
 	<div
 		class="col-span-4 lg:col-span-2 row-span-3 flex flex-col my-auto w-full lg:w-3/4"
 		bind:this={element}

@@ -32,16 +32,16 @@
 			<IntersectionObserver {element} bind:intersecting threshold={0.7} once>
 				{#if intersecting}
 					<div
-						class="lg:grid grid-cols-2"
+						class="md:grid grid-cols-2"
 						transition:fly={{ y: 50, duration: 750, delay: 250, opacity: 0, easing: cubicInOut }}
 					>
 						<div class="flex flex-col justify-between text-center lg:text-left">
-							<div>
+							<div class="m-auto">
 								<h2>
 									{data.attributes.text}
 								</h2>
 							</div>
-							<div class="hidden lg:block pt-6 pb-3 lg:pt-0 lg:pb-0">
+							<div class="hidden lg:block pt-6 pb-3 xl:pt-0 lg:pb-0">
 								<Button color="light" {path} className="">Jetzt probieren</Button>
 							</div>
 						</div>

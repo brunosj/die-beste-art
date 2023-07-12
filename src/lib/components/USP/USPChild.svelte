@@ -29,7 +29,7 @@
 					class=" w-full h-full object-cover object-center rounded-md saturate-[0.70] group-hover:saturate-100 duration-500"
 				/>
 			</div>
-			<IntersectionObserver {element} bind:intersecting threshold={0.5} rootMargin={'100px'} once>
+			<IntersectionObserver {element} bind:intersecting threshold={0} once>
 				<div
 					class="absolute top-0 lg:translate-y-[50%] -translate-y-[50%] left-0 w-3/4 lg:w-1/2 bg-beige-500 h-28 lg:h-32 p-6 lg:p-12 rounded-md group-hover:translate-x-5 duration-500 ease-in-out"
 				>

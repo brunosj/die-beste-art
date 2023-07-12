@@ -10,7 +10,7 @@
 
 	onMount(async () => {
 		const res = await fetch(
-			`${env.PUBLIC_CMS_API_URL}entle-extraseites?filters[slug][$eq]=impressum&populate=*`
+			`${env.PUBLIC_CMS_API_URL}entle-extraseites?filters[slug][$eq]=datenschutz&populate=*`
 		);
 		const data = await res.json();
 		pageData = data.data[0];
