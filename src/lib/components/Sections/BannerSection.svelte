@@ -29,9 +29,12 @@
 		>
 			<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={'0px'}>
 				{#if intersecting}
-					<div transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}>
+					<div
+						transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}
+						class="space-y-6 lg:space-y-12"
+					>
 						<h2>{title}</h2>
-						<div class="pt-12 markdownFontSec text-2xl">
+						<div class="markdownFontSec text-2xl">
 							<SvelteMarkdown source={text} />
 						</div>
 					</div>
