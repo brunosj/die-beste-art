@@ -25,7 +25,7 @@
 
 {#if data}
 	<div class="relative overflow-hidden">
-		<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
+		<div class="absolute w-full -z-50 opacity-[2%] overflow-hidden">
 			<Topography />
 		</div>
 		<div class="layout sectionPy" bind:this={element}>

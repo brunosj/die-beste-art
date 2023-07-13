@@ -3,7 +3,7 @@
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import IntersectionObserver from 'svelte-intersection-observer';
-
+	import Topography from '$assets/svg/topography.svelte';
 	export let title: string;
 	export let text: string;
 	export let picture1Src: string;
@@ -15,7 +15,10 @@
 	let intersecting: boolean = false;
 </script>
 
-<section class="layout grid grid-cols-2 overflow-hidden pt-12 md:pt-0" bind:this={element}>
+<section class="layout grid grid-cols-2 overflow-hidden pt-12 md:pt-0 relative" bind:this={element}>
+	<div class="absolute w-full -z-50 opacity-[2%] overflow-hidden">
+		<Topography />
+	</div>
 	<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={''}>
 		{#if intersecting}
 			<div class="col-span-2 md:col-span-1 flex flex-col my-auto w-full md:w-3/4">

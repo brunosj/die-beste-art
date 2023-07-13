@@ -23,7 +23,7 @@
 		picture1Src ? 'grid grid-cols-4 grid-rows-3 pt-12 md:pt-0' : 'sectionPy'
 	} overflow-hidden `}
 >
-	<div class="absolute w-full -z-50 opacity-[3%] overflow-hidden">
+	<div class="absolute w-full -z-50 opacity-[2%] overflow-hidden">
 		<Topography />
 	</div>
 	<div
