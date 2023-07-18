@@ -62,7 +62,7 @@
 								/>
 							</div>
 							<div class="block lg:hidden lg:pt-0 lg:pb-0">
-								<Button color="light" {path} className="">Jetzt probieren</Button>
+								<Button color="dark" {path} className="">Jetzt probieren</Button>
 							</div>
 						</div>
 					</div>

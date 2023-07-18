@@ -4,6 +4,8 @@
 	import Menu from 'virtual:icons/material-symbols/menu-rounded';
 	import Close from 'virtual:icons/material-symbols/close-rounded';
 	import { menuOpen } from '$stores/store';
+	import Button from '$components/Button/Button.svelte';
+	import { env } from '$env/dynamic/public';
 
 	let menuRef: HTMLDivElement;
 	let isOpen = false;
@@ -73,6 +75,10 @@
 					</a>
 				{/each}
 			</div>
+			<div class="px-4 py-0">
+				<Button color="dark" path={env.PUBLIC_SHOP_URL}>Online-Shop</Button>
+			</div>
+
 			<div class="border-t border-neutral-300 pt-6">
 				{#each additionalMenu as item, i}
 					<a
