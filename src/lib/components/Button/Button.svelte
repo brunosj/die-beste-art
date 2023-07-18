@@ -15,7 +15,7 @@
 		color === 'dark'
 			? 'bg-brown-900  duration-300 hover:bg-purple-500 ease-in-out'
 			: 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out',
-		'text-beige-500 text-xs uppercase rounded-md flex flex-row h-full group'
+		'text-beige-500 text-xs uppercase rounded-md flex flex-row h-full group items-center'
 	)}
 	aria-label={`Go to ${path}`}
 >

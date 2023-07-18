@@ -17,6 +17,10 @@
 		@apply text-lg font-secondary  md:text-2xl;
 	}
 
+	a {
+		@apply leading-none;
+	}
+
 	h4 {
 		@apply text-base font-secondary  md:text-xl;
 	}

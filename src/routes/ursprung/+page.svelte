@@ -31,8 +31,6 @@
 		property="og:image"
 		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
 	/>
-
-	<html lang="de" />
 </svelte:head>
 
 {#if pageData}
