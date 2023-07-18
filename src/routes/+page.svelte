@@ -20,19 +20,16 @@
 </script>
 
 <svelte:head>
-	<title>{pageData.attributes.titel}</title>
+	<title>'Entle'</title>
 	<meta
 		name="description"
 		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
 	/>
-	<meta property="og:title" content={metadata.title} />
-	<meta property="og:url" content={metadata.url} />
-	<meta property="og:description" content={metadata.description} />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content={metadata.image} />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={metadata.title} />
-	<meta name="twitter:description" content={metadata.description} />
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
+	/>
+
 	<html lang="de" />
 </svelte:head>
 
