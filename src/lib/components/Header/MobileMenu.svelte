@@ -74,9 +74,9 @@
 						{item.name}
 					</a>
 				{/each}
-			</div>
-			<div class="px-4 py-0">
-				<Button color="dark" path={env.PUBLIC_SHOP_URL}>Online-Shop</Button>
+				<div class="px-4 py-2">
+					<Button color="dark" path={env.PUBLIC_SHOP_URL}>Online-Shop</Button>
+				</div>
 			</div>
 
 			<div class="border-t border-neutral-300 pt-6">

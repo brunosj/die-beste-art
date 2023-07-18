@@ -19,7 +19,7 @@
 	)}
 	aria-label={`Go to ${path}`}
 >
-	<div class="flex flex-row h-8 group items-center py-3">
+	<div class="flex flex-row h-8 group items-center">
 		{#if isExternal}
 			<a
 				href={path}
