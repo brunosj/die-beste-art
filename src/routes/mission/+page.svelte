@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { env } from '$env/dynamic/public';
 	import { onMount } from 'svelte';
-	import SvelteMarkdown from 'svelte-markdown';
 	import type { Page } from '$types/responseInterfaces';
 	import Header from '$components/Header/Header.svelte';
 	import TopSection from '$components/Sections/TopSection.svelte';
 	import BannerSection from '$components/Sections/BannerSection.svelte';
-	import BottomSection from '$components/Sections/BottomSection.svelte';
 	import { CTA } from '$components';
 	import Team from '$components/Team/Team.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
@@ -22,8 +20,22 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Mission</title>
+	<meta
+		name="description"
+		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
+	/>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
+	/>
+
+	<html lang="de" />
+</svelte:head>
+
 {#if pageData}
-	<Seo title={pageData.attributes.titel} />
+	<!-- <Seo title={pageData.attributes.titel} /> -->
 	<Header
 		headerImage={pageData.attributes.bild.data.attributes.url}
 		headerHeight="h-48 lg:h-96"

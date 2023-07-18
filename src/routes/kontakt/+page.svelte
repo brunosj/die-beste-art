@@ -5,7 +5,6 @@
 	import TitleHeader from '$components/Header/TitleHeader.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
 	import ContactForm from '$components/Form/ContactForm.svelte';
-	import { page } from '$app/stores';
 
 	let pageData: Page;
 
@@ -19,8 +18,22 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Kontakt</title>
+	<meta
+		name="description"
+		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
+	/>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
+	/>
+
+	<html lang="de" />
+</svelte:head>
+
 {#if pageData}
-	<Seo title={pageData.attributes.titel} />
+	<!-- <Seo title={pageData.attributes.titel} /> -->
 	<TitleHeader title={pageData.attributes.titel} text={pageData.attributes.text} />
 	<!-- <ContactForm /> -->
 {/if}

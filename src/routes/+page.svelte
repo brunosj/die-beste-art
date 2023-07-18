@@ -6,7 +6,6 @@
 	import Header from '$components/Header/Header.svelte';
 	import UniqueSellingProposition from '$components/USP/UniqueSellingProposition.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
-	import { metadata } from '$data/config';
 
 	let pageData: Homepage;
 
@@ -20,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>'Entle'</title>
+	<title>Entle</title>
 	<meta
 		name="description"
 		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}

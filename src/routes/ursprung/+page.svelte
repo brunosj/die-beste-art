@@ -21,8 +21,22 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Ursprung</title>
+	<meta
+		name="description"
+		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
+	/>
+	<meta
+		property="og:image"
+		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
+	/>
+
+	<html lang="de" />
+</svelte:head>
+
 {#if pageData}
-	<Seo title={pageData.attributes.titel} />
+	<!-- <Seo title={pageData.attributes.titel} /> -->
 	<Header
 		headerImage={pageData.attributes.bild.data.attributes.url}
 		headerHeight="h-48 lg:h-96"
