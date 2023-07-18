@@ -5,6 +5,7 @@
 	import TitleHeader from '$components/Header/TitleHeader.svelte';
 	import Seo from '$components/SEO/SEO.svelte';
 	import ContactForm from '$components/Form/ContactForm.svelte';
+	import { page } from '$app/stores';
 
 	let pageData: Page;
 
@@ -19,7 +20,7 @@
 </script>
 
 {#if pageData}
-	<Seo />
+	<Seo title={pageData.attributes.titel} />
 	<TitleHeader title={pageData.attributes.titel} text={pageData.attributes.text} />
 	<!-- <ContactForm /> -->
 {/if}
