@@ -31,7 +31,7 @@
 				{#if intersecting}
 					<div
 						transition:fade={{ duration: 750, delay: 250, easing: cubicInOut }}
-						class="space-y-6 lg:space-y-12"
+						class="mt-6 lg:mt-0 space-y-6 lg:space-y-12"
 					>
 						<h2>{title}</h2>
 						<div class="markdownFontSec text-2xl">

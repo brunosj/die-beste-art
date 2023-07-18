@@ -1,5 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';
+	import ArrowRight from 'virtual:icons/mdi-light/arrow-right';
 
 	export let className: string = '';
 	export let color: 'dark' | 'light';
@@ -12,18 +13,23 @@
 	class={clsx(
 		className,
 		color === 'dark'
-			? 'bg-brown-900  duration-300 hover:bg-brown-700 ease-in-out'
+			? 'bg-brown-900  duration-300 hover:bg-purple-500 ease-in-out'
 			: 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out',
-		'text-beige-500 flex py-3 px-4  text-sm uppercase rounded-md'
+		'text-beige-500 text-xs uppercase rounded-md flex flex-row group'
 	)}
 	aria-label={`Go to ${path}`}
 >
 	{#if isExternal}
-		<a href={path} rel="noopener noreferrer" target="_blank">
+		<a href={path} rel="noopener noreferrer" target="_blank" class="py-3 px-4 leading-none">
 			<slot>Fallback</slot>
 		</a>{:else}
 		<a href={path}>
 			<slot>Fallback</slot>
 		</a>
 	{/if}
+	<div class="bg-purple-500 flex items-center px-2 rounded-r-md duration-300">
+		<div class="text-beige-500 group-hover:translate-x-1 duration-300">
+			<ArrowRight />
+		</div>
+	</div>
 </button>

@@ -5,13 +5,13 @@
 <nav
 	class="layout flex flex-col lg:flex-row lg:items-center justify-between bg-brown-900 h-full text-beige-500 py-6 lg:py-12 font-secondary"
 >
-	<div class="text-center">
+	<!-- <div class="text-center">
 		<a href="/" data-sveltekit-noscroll>
 			<span class="text-7xl lg:text-8xl font-bold tracking-[0.2em] track textHover text-brown-500"
 				>ENTLE</span
 			>
 		</a>
-	</div>
+	</div> -->
 	<div class="ml-auto lg:ml-0">
 		<span class="font-semibold text-sm lg:text-base"> Original Food GmbH </span>
 		<br />

@@ -42,7 +42,7 @@
 								</h2>
 							</div>
 							<div class="hidden lg:block pt-6 pb-3 xl:pt-0 lg:pb-0">
-								<Button color="light" {path} className="">Jetzt probieren</Button>
+								<Button color="dark" {path} className="">Jetzt probieren</Button>
 							</div>
 						</div>
 
