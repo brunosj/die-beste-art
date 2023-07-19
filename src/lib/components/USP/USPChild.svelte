@@ -24,7 +24,7 @@
 				<Image
 					src={picture.data.attributes.url}
 					layout="fullWidth"
-					alt="ENTLE"
+					alt="Entlebuch Bild"
 					priority={true}
 					class=" w-full h-full object-cover object-center rounded-md saturate-[0.70] group-hover:saturate-100 duration-500"
 				/>

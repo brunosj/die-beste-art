@@ -71,7 +71,7 @@
 							<Image
 								src={slide.attributes.bild.data.attributes.url}
 								layout="fullWidth"
-								alt="ENTLE"
+								alt="Entlebuch Bild"
 								aspectRatio={1}
 								class="h-full object-cover w-full"
 							/>

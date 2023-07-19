@@ -10,7 +10,7 @@
 >
 	<div>
 		<a href="/">
-			<h4 class="font-bold tracking-widest textHover">ENTLE</h4>
+			<h4 class="font-bold tracking-widest textHover">ENTLEBUCH</h4>
 		</a>
 	</div>
 	<div class="hidden lg:flex items-center space-x-12">

@@ -13,7 +13,7 @@
 		<Image
 			src={headerImage}
 			layout="fullWidth"
-			alt="ENTLE"
+			alt="Entlebuch Bild"
 			priority={true}
 			class="object-cover h-full w-full saturate-[1]"
 			loading="eager"

@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Entle</title>
+	<title>Entlebuch</title>
 	<meta
 		name="description"
 		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}

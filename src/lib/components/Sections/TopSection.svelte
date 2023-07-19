@@ -56,7 +56,7 @@
 							src={picture1Src}
 							layout="constrained"
 							width={400}
-							alt="ENTLE"
+							alt="Entlebuch Bild"
 							aspectRatio={1}
 							class="h-full object-cover w-full"
 						/>
@@ -84,7 +84,7 @@
 						src={picture2Src}
 						layout="constrained"
 						width={400}
-						alt="ENTLE"
+						alt="Entlebuch Bild"
 						aspectRatio={1}
 						class="h-full object-cover w-full"
 					/>

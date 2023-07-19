@@ -46,7 +46,7 @@
 		<Image
 			src={pictureSrc}
 			layout="fullWidth"
-			alt="ENTLE"
+			alt="Entlebuch Bild"
 			class="h-full w-full object-cover object-center"
 		/>
 	</div>

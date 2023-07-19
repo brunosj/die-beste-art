@@ -49,7 +49,7 @@
 						<div
 							class={`${
 								CTAIndex === 0 ? 'order-last ml-auto' : 'order-first mr-auto'
-							} flex flex-col items-center space-y-6 pt-3`}
+							} flex flex-col items-center space-y-6 pt-6`}
 						>
 							<div class="relative h-32 lg:h-40 w-full flex justify-center items-center">
 								<Image
