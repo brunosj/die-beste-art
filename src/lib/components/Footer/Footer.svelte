@@ -2,8 +2,8 @@
 	import { menu, additionalMenu } from '$data/menu';
 </script>
 
-<section class=" bg-brown-900 text-beige-500 ">
-	<nav class=" layout flex flex-col lg:flex-row lg:items-center justify-between h-full pt-6 lg:pt-12  pb-0 lg:pb-6 font-secondary">
+<section class=" bg-brown-900  ">
+	<nav class=" layout flex flex-col lg:flex-row lg:items-center justify-between h-full pt-6 lg:pt-12  pb-0 lg:pb-6 font-secondary text-beige-500">
 		<!-- <div class="text-center">
 		<a href="/" data-sveltekit-noscroll>
 			<span class="text-7xl lg:text-8xl font-bold tracking-[0.2em] track textHover text-brown-500"
@@ -33,7 +33,7 @@
 			{/each}
 		</div>
 	</nav>
-				<div class=" text-xs flex p-6">
+				<div class=" text-xs flex p-6 text-beige-700">
 		<span class="ml-auto">
 			Webentwicklung von 
 			<a
