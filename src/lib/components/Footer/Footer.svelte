@@ -2,8 +2,8 @@
 	import { menu, additionalMenu } from '$data/menu';
 </script>
 
-<section class="layout bg-brown-900 text-beige-500 font-secondary py-6 lg:py-12">
-	<nav class=" flex flex-col lg:flex-row lg:items-center justify-between h-full">
+<section class=" bg-brown-900 text-beige-500 ">
+	<nav class=" layout flex flex-col lg:flex-row lg:items-center justify-between h-full pt-6 lg:pt-12  pb-0 lg:pb-6 font-secondary">
 		<!-- <div class="text-center">
 		<a href="/" data-sveltekit-noscroll>
 			<span class="text-7xl lg:text-8xl font-bold tracking-[0.2em] track textHover text-brown-500"
@@ -25,7 +25,7 @@
 				>
 			{/each}
 		</div>
-		<div class="flex flex-col space-y-3 pt-3 lg:pt-0">
+			<div class="flex flex-col space-y-3 pt-3 lg:pt-0">
 			{#each additionalMenu as item}
 				<a href={item.slug} class="textHover text-sm lg:text-base" data-sveltekit-noscroll
 					>{item.name}</a
@@ -33,9 +33,9 @@
 			{/each}
 		</div>
 	</nav>
-	<!-- <div class="ml-auto w-full text-sm pt-6 flex text-right">
+				<div class=" text-xs flex p-6">
 		<span class="ml-auto">
-			entwickelt von
+			Webentwicklung von 
 			<a
 				href="https://www.landozone.net/"
 				class="textHover underline"
@@ -46,5 +46,5 @@
 				landozone
 			</a>
 		</span>
-	</div> -->
+	</div>
 </section>
