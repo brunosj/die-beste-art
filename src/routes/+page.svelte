@@ -40,6 +40,6 @@
 	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={0} />
 	<UniqueSellingProposition
 		mainText={pageData.attributes.heroText}
-		uspData={pageData.attributes.USP}
+		uspData={pageData.attributes.USP.slice(0, 2)}
 	/>
 {/if}

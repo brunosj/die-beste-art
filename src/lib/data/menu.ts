@@ -6,11 +6,11 @@ export const menu = [
 	{
 		name: 'Manufaktur',
 		slug: '/manufaktur'
-	},
-	{
-		name: 'Mission',
-		slug: '/mission'
 	}
+	// {
+	// 	name: 'Mission',
+	// 	slug: '/mission'
+	// }
 ];
 
 export const additionalMenu = [
