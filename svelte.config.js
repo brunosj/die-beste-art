@@ -13,6 +13,9 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
+		prerender: {
+			entries: ['/mission']
+		},
 		alias: {
 			$components: 'src/lib/components',
 			$assets: 'src/lib/assets',
@@ -20,12 +23,12 @@ const config = {
 			$types: 'src/lib/types',
 			$styles: 'src/lib/styles',
 			$stores: 'src/lib/stores'
-		},
-		csp: {
-			directives: {
-				'script-src': ['self']
-			}
 		}
+		// csp: {
+		// 	directives: {
+		// 		'script-src': ['self']
+		// 	}
+		// }
 	}
 };
 

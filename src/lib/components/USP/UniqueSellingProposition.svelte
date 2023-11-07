@@ -57,9 +57,9 @@
 			/>
 		{/each}
 	</div>
-	<!-- <div class="pt-0 lg:pt-24">
+	<div class="pt-0 lg:pt-24">
 		<Testimonials />
-	</div> -->
+	</div>
 
 	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
 </div>
