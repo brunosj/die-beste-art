@@ -14,7 +14,8 @@ const config = {
 			strict: true
 		}),
 		prerender: {
-			entries: ['/mission']
+			entries: ['/mission'],
+			handleHttpError: 'warn'
 		},
 		alias: {
 			$components: 'src/lib/components',
