@@ -36,6 +36,7 @@ jobs:
         env:
           CI: true
           PUBLIC_CMS_API_URL: https://cms.originalfood.de/api/
+          VITE_CMS_API_URL: https://cms.originalfood.de/api/
           PUBLIC_CMS_URL: https://cms.originalfood.de
           PUBLIC_SHOP_URL: https://shop.originalfood.de/p/juni-degustation-entlebuch-45-schweizer-milchschokolade-2-genusstafeln-a-50-g-100-g
           SITE_URL: ${{ inputs.site-url }}
