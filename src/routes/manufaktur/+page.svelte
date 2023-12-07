@@ -1,32 +1,43 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_SHOP_URL } from '$env/static/public';
 	import type { Page } from '$types/responseInterfaces';
 	import Header from '$components/Header/Header.svelte';
 	import TopSection from '$components/Sections/TopSection.svelte';
 	import BannerSection from '$components/Sections/BannerSection.svelte';
 	import BottomSection from '$components/Sections/BottomSection.svelte';
 	import { CTA } from '$components';
-	import Seo from '$components/SEO/SEO.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 
+	// SEO
+	let title = 'Manufaktur';
+	let metadescription = 'Beste Schokolade braucht Zeit: 60 lange Stunden';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Manufaktur',
+			slug: 'manufaktur'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title,
+		metadescription,
+		slug: '',
+		datePublished: '2023-12-05T14:19:33.000+0100',
+		lastUpdated: '2021-12-05T14:19:33.000+0100'
+	};
+
+	// Logic
 	export let data;
 	let pageData: Page;
 
 	$: pageData = data.page[0];
 </script>
 
-<svelte:head>
-	<title>Manufaktur</title>
-	<meta
-		name="description"
-		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
-	/>
-	<meta
-		property="og:image"
-		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
-	/>
-</svelte:head>
-
-<!-- <Seo title={pageData.attributes.titel} /> -->
+<SEO {...seoProps} />
 <Header
 	headerImage={pageData.attributes.bild.data.attributes.url}
 	headerHeight="h-48 lg:h-96"
@@ -55,4 +66,4 @@
 	rectangle1Color="#5c3929"
 	rectangle2Color="#93cf72"
 />
-<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
+<CTA path={PUBLIC_SHOP_URL} CTAIndex={1} />

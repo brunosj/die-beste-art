@@ -1,8 +1,6 @@
 <script lang="ts">
-	import clsx from 'clsx';
 	import ArrowRight from 'virtual:icons/mdi-light/arrow-right';
 
-	export let className: string = '';
 	export let color: 'dark' | 'light';
 	export let path: string;
 
@@ -10,13 +8,12 @@
 </script>
 
 <button
-	class={clsx(
-		className,
+	class={`${
 		color === 'dark'
 			? 'bg-brown-900  duration-300 hover:bg-purple-500 ease-in-out'
-			: 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out',
-		'text-beige-500 text-xs uppercase rounded-md '
-	)}
+			: 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out'
+	}
+		text-beige-500 text-xs uppercase rounded-md`}
 	aria-label={`Go to ${path}`}
 >
 	<div class="flex flex-row h-8 group items-center">

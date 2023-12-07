@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { menu } from '$data/menu';
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_SHOP_URL } from '$env/static/public';
 	import Button from '$components/Button/Button.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 </script>
@@ -17,7 +17,7 @@
 		{#each menu as item}
 			<a href={item.slug} class="textHover">{item.name}</a>
 		{/each}
-		<Button color="dark" path={env.PUBLIC_SHOP_URL}>Online-Shop</Button>
+		<Button color="dark" path={PUBLIC_SHOP_URL}>Online-Shop</Button>
 	</div>
 	<MobileMenu />
 </nav>

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Button from '$components/Button/Button.svelte';
 </script>
 
 <section class="layout -mt-12 sectionPb">

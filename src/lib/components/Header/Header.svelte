@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Image } from '@unpic/svelte';
-	import clsx from 'clsx';
 	import { fade } from 'svelte/transition';
 
 	export let headerImage: string;
@@ -9,7 +8,7 @@
 </script>
 
 <div class={headerHeight}>
-	<div class={clsx(headerHeight, 'w-full top-0 -z-10 absolute gradient-overlay  ')}>
+	<div class={`${headerHeight} w-full top-0 -z-10 absolute gradient-overlay`}>
 		<Image
 			src={headerImage}
 			layout="fullWidth"
@@ -17,6 +16,7 @@
 			priority={true}
 			class="object-cover h-full w-full saturate-[1]"
 			loading="eager"
+			fetchpriority="high"
 		/>
 		<div class="absolute layout bottom-6 lg:bottom-12">
 			<h1 class="text-beige-500 font-semibold">{headerTitle}</h1>

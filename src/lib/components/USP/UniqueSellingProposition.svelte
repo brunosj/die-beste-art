@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_SHOP_URL } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import WorldMap from '$assets/world.svelte';
 	import UspChild from './USPChild.svelte';
@@ -61,5 +61,5 @@
 		<Testimonials />
 	</div> -->
 
-	<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
+	<CTA path={PUBLIC_SHOP_URL} CTAIndex={1} />
 </div>

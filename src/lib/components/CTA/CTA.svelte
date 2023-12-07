@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_CMS_API_URL } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import type { CTA } from '$types/responseInterfaces';
 	import Button from '$components/Button/Button.svelte';
@@ -17,7 +17,7 @@
 	let data: CTA;
 
 	onMount(async () => {
-		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-CTAs?populate=*`);
+		const res = await fetch(`${PUBLIC_CMS_API_URL}entle-CTAs?populate=*`);
 		const responseData = await res.json();
 		data = responseData.data[CTAIndex];
 	});
@@ -42,7 +42,7 @@
 								</h2>
 							</div>
 							<div class="hidden lg:block pt-6 pb-3 xl:pt-0 lg:pb-0">
-								<Button color="dark" {path} className="">Jetzt probieren</Button>
+								<Button color="dark" {path}>Jetzt probieren</Button>
 							</div>
 						</div>
 
@@ -62,7 +62,7 @@
 								/>
 							</div>
 							<div class="block lg:hidden lg:pt-0 lg:pb-0">
-								<Button color="dark" {path} className="">Jetzt probieren</Button>
+								<Button color="dark" {path}>Jetzt probieren</Button>
 							</div>
 						</div>
 					</div>

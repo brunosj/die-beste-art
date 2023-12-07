@@ -1,33 +1,44 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
-	import { onMount } from 'svelte';
-	import SvelteMarkdown from 'svelte-markdown';
-	import { CTA } from '$components';
 	export let data;
 
+	import { PUBLIC_SHOP_URL } from '$env/static/public';
+	import { CTA } from '$components';
 	import type { Page } from '$types/responseInterfaces';
 	import Header from '$components/Header/Header.svelte';
 	import TopSection from '$components/Sections/TopSection.svelte';
 	import BannerSection from '$components/Sections/BannerSection.svelte';
 	import BottomSection from '$components/Sections/BottomSection.svelte';
-	import Seo from '$components/SEO/SEO.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 
+	// SEO
+	let title = 'Urpsrung';
+	let metadescription = 'Seltener Wildcacao aus Baure / Bolivien';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Ursprung',
+			slug: 'ursprung'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title,
+		metadescription,
+		slug: 'ursprung',
+		datePublished: '2023-12-05T14:19:33.000+0100',
+		lastUpdated: '2021-12-05T14:19:33.000+0100'
+	};
+
+	// Logic
 	let pageData: Page;
 
 	$: pageData = data.page[0];
 </script>
 
-<svelte:head>
-	<title>Ursprung</title>
-	<meta
-		name="description"
-		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
-	/>
-	<meta
-		property="og:image"
-		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
-	/>
-</svelte:head>
+<SEO {...seoProps} />
 
 <Header
 	headerImage={pageData.attributes.bild.data.attributes.url}
@@ -57,4 +68,4 @@
 	rectangle1Color="#735464"
 	rectangle2Color="#93cf72"
 />
-<CTA path={env.PUBLIC_SHOP_URL} CTAIndex={1} />
+<CTA path={PUBLIC_SHOP_URL} CTAIndex={1} />

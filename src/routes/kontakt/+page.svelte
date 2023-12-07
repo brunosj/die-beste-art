@@ -1,27 +1,38 @@
 <script lang="ts">
 	import type { Page } from '$types/responseInterfaces';
 	import TitleHeader from '$components/Header/TitleHeader.svelte';
-	import Seo from '$components/SEO/SEO.svelte';
 	import ContactForm from '$components/Form/ContactForm.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 
+	// SEO
+	let title = 'Kontakt';
+	let metadescription = '';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: ''
+		},
+		{
+			name: 'Kontakt',
+			slug: 'kontakt'
+		}
+	];
+	const seoProps = {
+		breadcrumbs,
+		title,
+		metadescription,
+		slug: '',
+		datePublished: '2023-12-05T14:19:33.000+0100',
+		lastUpdated: '2021-12-05T14:19:33.000+0100'
+	};
+
+	// Logic
 	export let data;
 	let pageData: Page;
 
 	$: pageData = data.page[0];
 </script>
 
-<svelte:head>
-	<title>Kontakt</title>
-	<meta
-		name="description"
-		content={'Schweizer Milchschokolade mit seltenem Wildcacao aus Bolivien'}
-	/>
-	<meta
-		property="og:image"
-		content="https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg"
-	/>
-</svelte:head>
-
-<!-- <Seo title={pageData.attributes.titel} /> -->
+<SEO {...seoProps} />
 <TitleHeader title={pageData.attributes.titel} text={pageData.attributes.text} />
 <!-- <ContactForm /> -->

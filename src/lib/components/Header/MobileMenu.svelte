@@ -5,7 +5,7 @@
 	import Close from 'virtual:icons/material-symbols/close-rounded';
 	import { menuOpen } from '$stores/store';
 	import Button from '$components/Button/Button.svelte';
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_SHOP_URL } from '$env/static/public';
 
 	let menuRef: HTMLDivElement;
 	let isOpen = false;
@@ -75,7 +75,7 @@
 					</a>
 				{/each}
 				<div class="px-4 py-2">
-					<Button color="dark" path={env.PUBLIC_SHOP_URL}>Online-Shop</Button>
+					<Button color="dark" path={PUBLIC_SHOP_URL}>Online-Shop</Button>
 				</div>
 			</div>
 

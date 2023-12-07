@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_CMS_API_URL } from '$env/static/public';
 	import { onMount } from 'svelte';
 	import type { Team } from '$types/responseInterfaces';
 	import SvelteMarkdown from 'svelte-markdown';
@@ -14,7 +14,7 @@
 	let intersecting: boolean = false;
 
 	onMount(async () => {
-		const res = await fetch(`${env.PUBLIC_CMS_API_URL}entle-teams?populate=*`);
+		const res = await fetch(`${PUBLIC_CMS_API_URL}entle-teams?populate=*`);
 		const responseData = await res.json();
 		data = responseData.data;
 	});

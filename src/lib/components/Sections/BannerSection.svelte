@@ -1,7 +1,6 @@
 <script lang="ts">
 	import SvelteMarkdown from 'svelte-markdown';
 	import { Image } from '@unpic/svelte';
-	import clsx from 'clsx';
 
 	import { fly, fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
@@ -17,10 +16,7 @@
 </script>
 
 <section
-	class={clsx(
-		gradientEndColor,
-		'bg-gradient-to-l lg:bg-gradient-to-r from-transparent to-100% lg:to-90% h-[50vh] relative'
-	)}
+	class={`${gradientEndColor} bg-gradient-to-l lg:bg-gradient-to-r from-transparent to-100% lg:to-90% h-[50vh] relative`}
 >
 	<div class="layout h-full">
 		<div
