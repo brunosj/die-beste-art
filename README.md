@@ -6,14 +6,14 @@ This repo contains the website of [Entlebuch](https://die-beste.art).
 
 ## Technologies
 
-The site is a [Next.js](https://nextjs.org/) project deployed on [Vercel](https://vercel.com/). Data is sourced from [Strapi](https://strapi.io/) and styling is done with [Tailwind CSS](https://tailwindcss.com). It is a multilingual site, using <code>next-i18next</code> to handle localizations and translations. It features both <code>dark</code> and <code>light</code> mode.
+The site is a [Sveltekit](https://kit.svelte.dev/) project written in TypeScript and deployed on [IONOS Deploy Now](https://www.ionos.com/hosting/deploy-now). Data is sourced from [Strapi](https://strapi.io/) and styling is done with [Tailwind CSS](https://tailwindcss.com).
 
 ## Installation
 
 1. Use the git CLI to close the repo
 
 ```
-gh repo clone brunosj/Studio-deremetz
+gh repo clone brunosj/die-beste-art
 ```
 
 2. Install dependencies
@@ -39,26 +39,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 .
 ├── node_modules
-├── public
-    ├── locales
 └── src
-    ├── components
     ├── lib
-    ├── pages
-    ├── styles
-    ├── utils
-├── .env
-├── .eslintrc.json
+    ├── routes
+    ├── app.d.ts
+    ├── app.html
+    ├── app.css
+├── static
+├── .eslintignore
+├── .eslintrc.cjs
 ├── .gitignore
-├── jsconfig.js
-├── next-i18next.config.js
-├── next-sitemap.config.json
-├── next-config.js
-├── package-lock.json
+├── .npmrc
+├── .prettierignore
+├── .prettierrrc
+├── pnpm-lock.yaml
 ├── package.json
-├── postcss.config.js
+├── postcss.config.cjs
 ├── README.md
-└── tailwind.config.js
+├── svelte.config.js
+├── tailwind.config.cjs
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ## Further development
