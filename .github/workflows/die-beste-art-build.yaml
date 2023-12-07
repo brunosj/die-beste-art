@@ -36,13 +36,13 @@ jobs:
         env:
           CI: true
           PUBLIC_CMS_API_URL: https://cms.originalfood.de/api/
-          VITE_CMS_API_URL: https://cms.originalfood.de/api/
           PUBLIC_CMS_URL: https://cms.originalfood.de
-          PUBLIC_SHOP_URL: https://shop.originalfood.de/p/juni-degustation-entlebuch-45-schweizer-milchschokolade-2-genusstafeln-a-50-g-100-g
-          SITE_URL: ${{ inputs.site-url }}
           PUBLIC_CONTACT_EMAIL: chocolat@die-beste.art
           PUBLIC_GITHUB_PAGE: brunosj
+          PUBLIC_SHOP_URL: https://shop.originalfood.de/p/juni-degustation-entlebuch-45-schweizer-milchschokolade-2-genusstafeln-a-50-g-100-g
           PUBLIC_SITE_URL: https://die-beste.art
+          SITE_URL: ${{ inputs.site-url }}
+          VITE_CMS_API_URL: https://cms.originalfood.de/api/
         run: |
           npm install --global pnpm
           pnpm install
@@ -54,7 +54,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: c375b258-2422-49e1-b541-deaf777d596a
+          project-id: 8b77f790-ef34-42d5-97f1-a03f3edaefba
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
