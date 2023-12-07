@@ -40,6 +40,9 @@ jobs:
           PUBLIC_CMS_URL: https://cms.originalfood.de
           PUBLIC_SHOP_URL: https://shop.originalfood.de/p/juni-degustation-entlebuch-45-schweizer-milchschokolade-2-genusstafeln-a-50-g-100-g
           SITE_URL: ${{ inputs.site-url }}
+          PUBLIC_CONTACT_EMAIL: chocolat@die-beste.art
+          PUBLIC_GITHUB_PAGE: brunosj
+          PUBLIC_SITE_URL: https://die-beste.art
         run: |
           npm install --global pnpm
           pnpm install
