@@ -16,7 +16,7 @@
 </script>
 
 <section
-	class={`${gradientEndColor} bg-gradient-to-l lg:bg-gradient-to-r from-transparent to-100% lg:to-90% h-[50vh] relative`}
+	class={`${gradientEndColor} bg-gradient-to-l lg:bg-gradient-to-r from-transparent to-100% lg:to-90% h-[35vh] lg:h-[50vh] relative`}
 >
 	<div class="layout h-full">
 		<div

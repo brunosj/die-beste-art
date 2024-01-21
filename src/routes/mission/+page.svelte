@@ -40,7 +40,7 @@
 <SEO {...seoProps} />
 <!-- <Header
 	headerImage={pageData.attributes.bild.data.attributes.url}
-	headerHeight="h-48 lg:h-96"
+	headerHeight="h-48 md:h-72 lg:h-96"
 	headerTitle={pageData.attributes.titel}
 />
 <TopSection

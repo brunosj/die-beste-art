@@ -27,7 +27,7 @@
 		<Topography />
 	</div>
 	<div
-		class="col-span-4 md:col-span-2 row-span-3 flex flex-col my-auto w-full md:w-3/4"
+		class="col-span-4 lg:col-span-2 row-span-3 flex flex-col my-auto w-full md:w-3/4"
 		bind:this={element}
 	>
 		<IntersectionObserver {element} bind:intersecting threshold={1} once rootMargin={'0px'}>

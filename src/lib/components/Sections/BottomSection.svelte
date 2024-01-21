@@ -21,7 +21,7 @@
 	</div>
 	<IntersectionObserver {element} bind:intersecting threshold={0} once rootMargin={''}>
 		{#if intersecting}
-			<div class="col-span-2 md:col-span-1 flex flex-col my-auto w-full md:w-3/4">
+			<div class="col-span-2 lg:col-span-1 flex flex-col my-auto w-full md:w-3/4">
 				<div transition:fade={{ duration: 750, delay: 500, easing: cubicInOut }} class="md:py-12">
 					<h2>{title}</h2>
 					<div class="pt-6 md:pt-12">

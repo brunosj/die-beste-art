@@ -27,7 +27,7 @@
 
 <div class=" bg-gradient-to-b from-purple-500 to-beige-500 max-h-fit overflow-hidden">
 	<div class=" layout relative" bind:this={element}>
-		<div class="flex items-center xl:h-[52vh] max-h-fit 2xl:h-[37vh] h-[40vh]">
+		<div class="flex items-center xl:h-[52vh] max-h-fit 2xl:h-[37vh] h-[35vh]">
 			<div class="flex items-center flex-col w-full lg:w-1/2 z-10 py-6 lg:py-0">
 				<IntersectionObserver {element} bind:intersecting threshold={1} rootMargin={'100px'} once>
 					{#if intersecting}
