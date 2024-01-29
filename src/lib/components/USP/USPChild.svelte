@@ -39,7 +39,7 @@
 								transition:fly={{
 									y: 20,
 									duration: 400,
-									delay: 750,
+									delay: 0,
 									opacity: 0,
 									easing: cubicInOut
 								}}
@@ -51,7 +51,7 @@
 								transition:fly={{
 									y: 20,
 									duration: 400,
-									delay: 850,
+									delay: 200,
 									opacity: 0,
 									easing: cubicInOut
 								}}
@@ -64,7 +64,7 @@
 								transition:fly={{
 									y: 20,
 									duration: 400,
-									delay: 850,
+									delay: 200,
 									opacity: 0,
 									easing: cubicInOut
 								}}
