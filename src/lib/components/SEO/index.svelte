@@ -6,8 +6,16 @@
 	import OpenGraph from './OpenGraph.svelte';
 	import SchemaOrg from './SchemaOrg.svelte';
 
-	const { author, ogLanguage, siteLanguage, siteShortTitle, siteTitle, siteUrl, githubPage } =
-		website;
+	const {
+		author,
+		ogLanguage,
+		siteDescription,
+		siteLanguage,
+		siteShortTitle,
+		siteTitle,
+		siteUrl,
+		githubPage
+	} = website;
 
 	export let entityMeta = null;
 	export let lastUpdated;
@@ -72,7 +80,7 @@
 
 <svelte:head>
 	<title>{pageTitle}</title>
-	<meta name="description" content={metadescription} />
+	<meta name="description" content={siteDescription} />
 	<meta
 		name="robots"
 		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
