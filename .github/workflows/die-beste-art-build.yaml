@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: public
+  DEPLOYMENT_FOLDER: build
 
 jobs:
 # Please do not rename this job
@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: v20.x
+          node-version: v18.x
 
       - name: Build Node assets
         env:
